@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RevloClient.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,8 +30,17 @@ namespace RevloClient
         {
             String key = txtKey.Text;
             MainClientWindow mainClient = new MainClientWindow(key,this);
-            this.Hide();
-            mainClient.Show();
+            AuthRepository auth = new AuthRepository();
+            if(auth.Validate(key))
+            {
+                this.Hide();
+                mainClient.Show();
+            }
+            else
+            {
+                MessageBox.Show("You entered an incorrect API Key.");
+            }
+            
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevloClient"
         mc:Ignorable="d"
-        Title="MainClient" Height="500" Width="700" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed">
+        Title="Revlo Client" Height="500" Width="700" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed">
     <Grid>
         
     </Grid>
