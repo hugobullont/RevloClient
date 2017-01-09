@@ -1,12 +1,43 @@
-﻿<Window x:Name="MainClient" x:Class="RevloClient.MainClientWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevloClient"
+        xmlns:igDP="http://infragistics.com/DataPresenter" x:Name="MainClient" x:Class="RevloClient.MainClientWindow"
         mc:Ignorable="d"
-        Title="Revlo Client" Height="500" Width="700" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed">
+        Title="Revlo Client" Height="250" Width="600" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed" Background="#FF00A0E2" Loaded="MainClient_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="2" Content="Automatic SongRequest" Foreground="White" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Twitch IRC Key:" Foreground="White"/>
+        <TextBox x:Name="txtIRC" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="3" Height="24" Width="Auto"/>
+        <Label Grid.Column="1" Grid.Row="4" Content="Twitch Channel:" Foreground="White"/>
+        <TextBox x:Name="txtChannel" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="4" Height="24" Width="Auto"/>
+        <Label Grid.Column="1" Grid.Row="5" Content="Twitch Chat Username:" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtChatUsername" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="5" Height="24" Width="Auto"/>
+        <Label x:Name ="labelAdvice"  Grid.Column="1" Grid.Row="7" Content="To use this function you must have a reward called Song Request" Foreground="White" Grid.ColumnSpan="4" Visibility="Collapsed"/>
+        <Button x:Name="btnGoSongRequest" Grid.Column="5" Grid.Row="7" Content="Go" />
+
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevloClient"
         mc:Ignorable="d"
-        Title="Revlo Client" Height="155" Width="448" ResizeMode="NoResize" Icon="logo.ico" ShowInTaskbar="False" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Background="#FF00A0E2" Foreground="#FF06234B">
+        Title="Revlo Client" Height="155" Width="448" ResizeMode="CanMinimize" Icon="logo.ico" ShowInTaskbar="False" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Background="#FF00A0E2" Foreground="#FF06234B">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
