@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using RevloClient.Entities;
 
+
 namespace RevloClient
 {
     /// <summary>
@@ -24,7 +25,6 @@ namespace RevloClient
         String revloAPIKey;
         int srRewardId = 0;
         LoginWindow loginWindow;
-        RedemptionResponse allRedemptions;
         RewardResponse allRewards;
         public MainClientWindow()
         {
@@ -63,6 +63,45 @@ namespace RevloClient
                 btnGoSongRequest.IsEnabled = false;
 
             }
+
+            
+        }
+
+        private void btnGoSongRequest_Click(object sender, RoutedEventArgs e)
+        {
+            String ircKey = txtIRC.Text;
+            String chatUsername = txtChatUsername.Text;
+            String channel = txtChannel.Text;
+
+            if(ValidateFields())
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("You forgot to enter some data.");
+            }
+
+        }
+
+        bool ValidateFields()
+        {     
+            if (String.IsNullOrEmpty(txtIRC.Text))
+            {
+                return false;
+            }
+
+            if(String.IsNullOrEmpty(txtChatUsername.Text))
+            {
+                return false;
+            }
+
+            if(String.IsNullOrEmpty(txtChannel.Text))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

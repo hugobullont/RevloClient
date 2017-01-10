@@ -17,7 +17,7 @@ namespace RevloClient.Repository
         {
             RewardResponse rewards;
             String result;
-            var request = (HttpWebRequest)WebRequest.Create("https://api.revlo.co/1/rewards?");
+            var request = (HttpWebRequest)WebRequest.Create("http://api.revlo.co/1/rewards?");
 
             request.Method = WebRequestMethods.Http.Get;
             request.Accept = "application/json";
@@ -38,7 +38,7 @@ namespace RevloClient.Repository
             RedemptionResponse redemptions;
             String result;
 
-            var request = (HttpWebRequest)WebRequest.Create("https://api.revlo.co/1/redemptions?page=1&refunded=false");
+            var request = (HttpWebRequest)WebRequest.Create("http://api.revlo.co/1/redemptions?page=1&refunded=false");
 
             request.Method = WebRequestMethods.Http.Get;
             request.Accept = "application/json";
@@ -53,6 +53,45 @@ namespace RevloClient.Repository
             redemptions = JsonConvert.DeserializeObject<RedemptionResponse>(result);
             return redemptions;
 
+        }
+
+        public List<Redemption> GetRedemptionsByRewardID(String key, int id)
+        {
+            RedemptionResponse redemptions = GetAllRedemptions(key);
+            List<Redemption> result = new List<Redemption>();
+            List<Redemption> allRedemptions = redemptions.redemptions.ToList();
+
+            foreach(Redemption temp in allRedemptions)
+            {
+                if(temp.reward_id == id && temp.completed==false)
+                {
+                    result.Add(temp);
+                }
+            }
+            return result;
+        }
+
+        public void SetRedemptionCompleted(String key, int redId)
+        {
+            var request = (HttpWebRequest)WebRequest.Create("http://api.revlo.co/1/redemptions/"+redId);
+            request.Method = "PATCH";
+            request.Accept = "application/json";
+            request.ContentType = "application/json";
+            request.Host = "api.revlo.co:443";
+            request.Headers.Add("x-api-key", key);
+
+            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+            {
+                string json = "{ \"completed\": \"true\" }";
+
+                streamWriter.Write(json);
+            }
+
+            var httpResponse = (HttpWebResponse)request.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var responseText = streamReader.ReadToEnd();
+            }
         }
     }
 }
