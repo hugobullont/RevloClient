@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevloClient"
         mc:Ignorable="d"
-        Title="SongRequest" Height="600" Width="600" WindowStartupLocation="CenterScreen" Background="#FF00A0E2" Icon="logo.ico" Loaded="SongRequest_Loaded" Closed="SongRequestWindow_Closed">
+        Title="SongRequest" Height="250" Width="600" WindowStartupLocation="CenterScreen" Background="#FF00A0E2" Icon="logo.ico" Loaded="SongRequest_Loaded" Closed="SongRequestWindow_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
@@ -21,16 +21,13 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1" Content="Songs:" Foreground="White"/>
         <Label x:Name="labelAdvice" Grid.Column="2" Grid.Row="1" Content="You don't have songs." Grid.ColumnSpan="2" Foreground="White" Visibility="Collapsed"/>
-        <DataGrid x:Name="songsDataGrid" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Height="Auto" Width="Auto" />
+        <DataGrid x:Name="songsDataGrid" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Height="100" Width="Auto" IsReadOnly="True" HeadersVisibility="Column"/>
 
     </Grid>
 </Window>

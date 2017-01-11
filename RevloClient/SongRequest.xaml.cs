@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace RevloClient
 {
@@ -27,6 +28,10 @@ namespace RevloClient
         String chatUsername;
         String channel;
         LoginWindow login;
+        List<Song> songList;
+
+        DispatcherTimer dispatcherTimer;
+        
         public SongRequest()
         {
             InitializeComponent();
@@ -40,13 +45,17 @@ namespace RevloClient
             this.chatUsername = chatUsername;
             this.channel = channel;
             this.login = login;
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 30);
+            dispatcherTimer.Start();
             InitializeComponent();
         }
 
         private void SongRequest_Loaded(object sender, RoutedEventArgs e)
         {
             SongRepository songRepo = new SongRepository();
-            List<Song> songList = songRepo.GetSongs(srRedID, revloKey);
+            songList = songRepo.GetSongs(srRedID, revloKey);
 
             songsDataGrid.ItemsSource = songList;
 
@@ -61,5 +70,13 @@ namespace RevloClient
         {
             Environment.Exit(0);
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            SongRepository songRepo = new SongRepository();
+            songList = songRepo.GetSongs(srRedID, revloKey);
+            songsDataGrid.ItemsSource = songList;
+        }
+
     }
 }
