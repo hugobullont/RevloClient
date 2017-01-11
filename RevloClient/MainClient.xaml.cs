@@ -75,7 +75,9 @@ namespace RevloClient
 
             if(ValidateFields())
             {
-
+                SongRequest newSRWindow = new SongRequest(srRewardId, revloAPIKey, ircKey, chatUsername, channel, loginWindow);
+                this.Hide();
+                newSRWindow.Show();
             }
             else
             {

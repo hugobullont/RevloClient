@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RevloClient"
         xmlns:igDP="http://infragistics.com/DataPresenter" x:Name="MainClient" x:Class="RevloClient.MainClientWindow"
         mc:Ignorable="d"
-        Title="Revlo Client" Height="250" Width="600" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed" Background="#FF00A0E2" Loaded="MainClient_Loaded">
+        Title="Revlo Client" Height="250" Width="600" WindowStartupLocation="CenterScreen" Closed="MainClient_Closed" Background="#FF00A0E2" Loaded="MainClient_Loaded" Icon="logo.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
