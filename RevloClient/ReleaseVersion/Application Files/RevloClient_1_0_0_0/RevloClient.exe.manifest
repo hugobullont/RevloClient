@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="RevloClient.exe" version="1.0.0.0" publicKeyToken="95f5975ba3716307" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="RevloClient" version="1.0.0.0" publicKeyToken="CA5D9E0930AFD3CF" language="neutral" processorArchitecture="msil" />
+    <commandLine file="RevloClient.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la 
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="526336">
+      <assemblyIdentity name="Newtonsoft.Json" version="9.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>V14w+Y5OpCyeUW7ci7sprYtQsXOj5rNrW6OeEzzOlAY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RevloClient.exe" size="355240">
+      <assemblyIdentity name="RevloClient" version="1.0.0.0" publicKeyToken="CA5D9E0930AFD3CF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>cMFAuwYA0SPGOjAB/7U8AeznhgncLaz1BeaYZvmw3mU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TwitchLib.dll" size="644608">
+      <assemblyIdentity name="TwitchLib" version="1.3.6.36949" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yXI2LvBlwOEHRFPCllkoKQsBp/wIlw16ubWI5mPApZI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebSocket4Net.dll" size="90624">
+      <assemblyIdentity name="WebSocket4Net" version="0.14.1.0" publicKeyToken="EB4E154B696BF72A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LiUy8Aqhg0RVcGbTwqmpXbsOgQk+SJQVRwTeUIB5cNU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="logo.ico" size="164564">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lKlz5i8KDdwvtce4zJ9rZI8+rmZ5dGRHT8nkxU/7UD8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="RevloClient.exe.config" size="542">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>90GRloPizLXGZG5gMT0/cvM3uhjObZsB5s0S3YEdhmA=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HUGO-PC\Hugo" issuerKeyHash="1b626abd2558d71f484d11a64327e9d8fe4afcc9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>tQSwN9Tk6RUELY7Yc6WAApEG27tjNgovXLZyhSZBM2U=</DigestValue></Reference></SignedInfo><SignatureValue>NYfKZtq/GTA+VK1UnfRZPQHymgD2LdY8oOn808KV+8zDGVCVqY3TYo3BjUZ+6fMSuMkbI87rdAF1COD+Q6RF5SDs+sqXwFyQLjy9mpo8xjRaJ61kScyiyJODl6Zgttw+j2b5XkfJxZUuBGOGDuI5ghKmaWWujeInu+df1TvMD+k=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uepb8X8+FBTdtr1uhzeUk7x2fiAvCxXTqabItaWJVouyi8kb15zxqicxUPXKaggGYok75EUhd6q74LR0SzcfTHzt/teQoR5PaTWjqaoH8/h7dyBQpfx1fQ62N+qh49giMQnoZtmicMnxMe/fz8mSaYRMjAkutuBlX1RRt5QFqa0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="653341268572b65c2f0a3663bbdb06910280a573d88e2d0415e9e4d437b004b5" Description="" Url=""><as:assemblyIdentity name="RevloClient.exe" version="1.0.0.0" publicKeyToken="95f5975ba3716307" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HUGO-PC\Hugo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6sj+FdhLyXWNjXDw+nztQX6L+ocYYyD+a3zde6la6MA=</DigestValue></Reference></SignedInfo><SignatureValue>EF35b+Scfe5JJLVKzXAPnalJGvLx5zX9UvYwozeS/Kv1Y4feN1E1bzIqHKbKP+vYKFLy8aQrm2mN5hZgbfM9/Rf540wj8u+INoMm23u7Ro7OeL/4Mtd6crNjujo2L0c9iLEgTru/0bbEIouaf8s1vXJSoZfBot1qEo1YOmhlBEc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uepb8X8+FBTdtr1uhzeUk7x2fiAvCxXTqabItaWJVouyi8kb15zxqicxUPXKaggGYok75EUhd6q74LR0SzcfTHzt/teQoR5PaTWjqaoH8/h7dyBQpfx1fQ62N+qh49giMQnoZtmicMnxMe/fz8mSaYRMjAkutuBlX1RRt5QFqa0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQGaTYjc805a5PFViJRyc+XzANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgASABVAEcATwAtAFAAQwBcAEgAdQBnAG8wHhcNMTcwMTEyMDIzNDQ1WhcNMTgwMTEyMDgzNDQ1WjAjMSEwHwYDVQQDHhgASABVAEcATwAtAFAAQwBcAEgAdQBnAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALnqW/F/PhQU3ba9boc3lJO8dn4gLwsV06mmyLWliVaLsovJG9ec8aonMVD1ymoIBmKJO+RFIXequ+C0dEs3H0x87f7XkKEeT2k1o6mqB/P4e3cgUKX8dX0OtjfqoePYIjEJ6GbZonDJ8THv38/JkmmETIwJLrbgZV9UUbeUBamtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAacwD0HTbW+iwsPppDQlEttovUN9oW0u4zQW7G5rRZnrUYTSUZbCdZ7Mk7nnbcv5GvgXHynFL7YXKrsRe62oEtCnb1QaH04IPnANmVGkTiIjPzCwp0/HnjzSps79HxgQJ//TwnbYftz2N4UZR0eqm3ch9R1h+mZrFHMQAppTjiJk=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
