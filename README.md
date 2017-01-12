@@ -36,4 +36,4 @@ Luego, necesitas ingresar un [Twitch IRC Key] (http://twitchapps.com/tmi/), el T
 
 Finalmente presiona Go y esperas la magia.
 
-RevloClient usa: [Revlo API](https://github.com/teamrevlo/RevloAPI), [TwitchLib](https://github.com/swiftyspiffy/TwitchLib) and [Newtonsoft.Json](http://www.newtonsoft.com/json).
+RevloClient usa: [Revlo API](https://github.com/teamrevlo/RevloAPI), [TwitchLib](https://github.com/swiftyspiffy/TwitchLib) y [Newtonsoft.Json](http://www.newtonsoft.com/json).
