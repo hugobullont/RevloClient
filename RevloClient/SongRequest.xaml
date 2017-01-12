@@ -22,12 +22,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1" Content="Songs:" Foreground="White"/>
         <Label x:Name="labelAdvice" Grid.Column="2" Grid.Row="1" Content="You don't have songs." Grid.ColumnSpan="2" Foreground="White" Visibility="Collapsed"/>
         <DataGrid x:Name="songsDataGrid" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Height="100" Width="Auto" IsReadOnly="True" HeadersVisibility="Column"/>
+        <Label x:Name="labelConsole" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Content="null" Foreground="White" />
 
     </Grid>
 </Window>

@@ -36,7 +36,7 @@
         <TextBox x:Name="txtChannel" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="4" Height="24" Width="Auto"/>
         <Label Grid.Column="1" Grid.Row="5" Content="Twitch Chat Username:" Foreground="White" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtChatUsername" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="5" Height="24" Width="Auto"/>
-        <Label x:Name ="labelAdvice"  Grid.Column="1" Grid.Row="7" Content="To use this function you must have a reward called Song Request" Foreground="White" Grid.ColumnSpan="4" Visibility="Collapsed"/>
+        <Label x:Name ="labelAdvice"  Grid.Column="1" Grid.Row="7" Content="To use this function you must have a reward called Song Request or SongRequest" Foreground="White" Grid.ColumnSpan="4" Visibility="Collapsed"/>
         <Button x:Name="btnGoSongRequest" Grid.Column="5" Grid.Row="7" Content="Go" Click="btnGoSongRequest_Click" />
 
     </Grid>
