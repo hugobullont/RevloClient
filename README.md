@@ -1,6 +1,6 @@
 # RevloClient
 
-## Download / Descargar: [Download Link](https://goo.gl/tp9qLt)
+## Download / Descargar: Pending testing
 
 ### English
 #### What is?
