@@ -1,11 +1,11 @@
 # RevloClient
 
-## Download / Descargar: 
+## Download / Descargar: Pending testing
 
 ### English
 #### What is?
 RevloClient is a project that uses the Revlo API to (for now) perform Song Requests. (Based on [Revlo SongRequests Python Example](https://github.com/teamrevlo/revlo-python-client/tree/master/examples/songrequests))
-The project is in GitHub to receive updates from other programmers.
+The project is on GitHub to receive updates from other programmers.
 
 #### How to use it?
 In the first screen you must enter your [API Key](https://www.revlo.co/settings/api).
