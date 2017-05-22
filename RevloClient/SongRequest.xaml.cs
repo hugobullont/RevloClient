@@ -136,7 +136,12 @@ namespace RevloClient
         {
             foreach(Song temp in songList)
             {
-                client.SendMessage("!songs request " + temp.song);
+                String request = temp.song.ToLower();
+                if (!(request.Contains("gemidos")||request.Contains("porno")||request.Contains("antaurus")||request.Contains("cachame")))
+                {
+                    client.SendMessage("!songs request " + request);
+                }
+                
                 revloRepo.SetRedemptionCompleted(revloKey, temp.redemption_id);
             }
         }
